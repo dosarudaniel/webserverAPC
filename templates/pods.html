@@ -1,0 +1,48 @@
+<!--
+    Author: Andrei Raduta
+    E-mail: andrei.raduta11@gmail.com
+-->
+
+<html>
+    <head>
+        <title>ED011 devices status</title>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+    </head>
+
+    <body>
+        <div w3-include-html="result.html" align="center"></div></br>
+
+        <form action = "http://localhost:5000/" method = "POST">
+            <div align="center"><table>
+
+                <tr>
+                    <th>Pod number (1-2)</th>
+                    <th>
+                        <input type="radio" name="pod" value="1"/> 1 <br>
+                        <input type="radio" name="pod" value="2"/> 2
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Device type</th>
+                    <th><input type="radio" name="type"value="router"> Router
+                        <br>
+                        <input type="radio" name="type"value="switch"> Switch
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Device index (1-8 or 1-4):</th>
+                    <th><input type="number" name="index" min="1" max="8"></th>
+                </tr>
+
+                <tr><th colspan = "2">
+                    <input type = "submit" value = "Change state!"/>
+                </th></tr>
+
+            </table></div>
+        </form>
+
+        <script> w3.includeHTML(); </script>
+    </body>
+</html>
