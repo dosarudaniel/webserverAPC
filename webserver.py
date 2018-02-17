@@ -195,8 +195,10 @@ def state():
 			status = devicesList[listIndex]["Power status"]
 
 			if ( status == True ):
+				# aici trebuie apelata functia: applyActionToOutlet(#TODO, 2, #TODO)
 				devicesList[listIndex]["Power status"] = False
 			else:
+				# aici trebuie apelata functia: applyActionToOutlet(#TODO, 1, #TODO)
 				devicesList[listIndex]["Power status"] = True
 
 		# Update the page with the devices status
